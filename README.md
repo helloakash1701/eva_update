@@ -113,9 +113,15 @@ First run the following commands to initialize the tool. These only have to be
 run once, but if the tool is updated they should be repeated.
 
 ```
+# Build the Docker containers
 docker-compose build
+
+# Apply database migrations
 docker-compose run eva python3 manage.py migrate
+
+# Collect static files
 docker-compose run eva python3 manage.py collectstatic
+
 ```
 
 Start the app by running:
