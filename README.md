@@ -67,16 +67,37 @@ Requirements:
 
 Install:
 ```bash
+
+# Clone the repository
 git clone https://github.com/Ericsson/eva.git
+
+# Change to the project directory
 cd eva
+
+# Install virtualenv using pip3
 pip3 install virtualenv
+
+# Create a virtual environment
 python3 -m virtualenv venv
-. venv/bin/activate
+
+# Activate the virtual environment
+source venv/bin/activate
+
+# Upgrade pip inside the virtual environment
 pip install --upgrade pip
+
+# Install project dependencies
 pip install -r requirements.txt
+
+# Prepare the tracker
 python manage.py preparetracker
+
+# Apply database migrations
 python manage.py migrate
+
+# Collect static files
 python manage.py collectstatic
+
 ```
 
 Start the app by running the `start.sh` file.
