@@ -19,18 +19,36 @@ Requirements:
 * Microsoft Visual Studio 2015 or later version: https://visualstudio.microsoft.com/downloads/ (to have a cpp-compiler)
 
 Install:
-```powershell
+# Clone the repository
 git clone https://github.com/Ericsson/eva.git
+
+# Change to the project directory
 cd eva
+
+# Upgrade pip
 python -m pip install --upgrade pip
+
+# Install virtualenv
 pip install virtualenv
-virtualenv venv
+
+# Create a virtual environment
+python -m virtualenv venv
+
+# Activate the virtual environment (for Windows)
 venv\Scripts\activate.bat
+
+# Install project dependencies
 pip install -r requirements.txt
+
+# Prepare the tracker
 python manage.py preparetracker
+
+# Apply database migrations
 python manage.py migrate
+
+# Collect static files
 python manage.py collectstatic
-```
+
 
 Extract ffmpeg archive and copy `ffmpeg.exe`, from the bin folder, to the root
 of the `tool\` folder e.g. if you clone the repository as `eva` place the ffmpeg.exe inside
